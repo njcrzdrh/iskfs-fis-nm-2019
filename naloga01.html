@@ -19,6 +19,9 @@
 <button id="gumbPrižgi4" onClick="prižgi4()">Prižgi O 2</button>
 <button id="gumbUgasni4" onClick="ugasni4()">Ugasni O 2</button>
 <p></p>
+<button id="gumbPrižgiVse" onClick="prižgiVse()">Prižgi Vse</button>
+<button id="gumbUgasniVse" onClick="ugasniVse()">Ugasni Vse</button>
+<p></p>
 
 <br>
 
@@ -53,12 +56,14 @@ function ugasni3 () {
     socket2.emit("ukazArduinu", 0); // na strežnik pošljem 0
 }
 
-function prižgi4 () {
-    socket2.emit("ukazArduinu", 3); // na strežnik pošljem 1
+function prižgiVse () {
+    socket1.emit("ukazArduinu", 4); // na strežnik pošljem 1
+
 }
 
-function ugasni4 () {
-    socket2.emit("ukazArduinu", 2); // na strežnik pošljem 0
+function ugasniVse () {
+    socket1.emit("ukazArduinu", 5); // na strežnik pošljem 0
+
 }
 
 </script>
